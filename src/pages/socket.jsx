@@ -61,7 +61,7 @@ export default function Socket(props) {
       <Input name="userName" value={filterUser.userName} onChange={handleInput} style={{ width: 300 }}></Input>
       <Button onClick={handleNameClick}>search</Button>
       <div>name: {dataSource.userName}</div>
-      <div>password: {dataSource.password}</div>
+      {/* <div>password: {dataSource.password}</div> */}
     </div>
   );
 }

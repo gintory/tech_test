@@ -12,10 +12,11 @@ io.on('connection', (socket) => {
     io.emit('pong', data);
   });
   socket.on('getUser', (data) => {
-    io.emit('sendUser', data);
+    console.log('socket拿到', data);
+    io.emit('sendUser', { ...data, userName: `socket${data.userName}` });
   });
 });
 
 server.listen(3006, () => {
-  console.log('Server is running on port 666');
+  console.log('Server is running on port 3006');
 });

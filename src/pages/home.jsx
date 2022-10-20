@@ -1,9 +1,11 @@
 import { Menu, Dropdown } from 'antd';
 import React from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
+import './index.css';
+
 export default function home(props) {
   const navigate = useNavigate();
-  const menu = [
+  const menu1 = [
     {
       label: 'echarts',
       key: 'echarts',
@@ -38,23 +40,41 @@ export default function home(props) {
     }
   ];
 
-  function renderMenu() {
-    if (menu) {
-      return menu.map((item) => (
-        <Menu.Item className="submenu" key={item.key}>
-          <NavLink to={item.url}>
-            <span>{item.title}</span>
-          </NavLink>
-        </Menu.Item>
-      ));
-    } else {
-      navigate('/');
+  const menu = [
+    {
+      label: 'js',
+      key: 'js',
+      url: 'js',
+      children: [
+        {
+          label: 'promise',
+          key: 'promise',
+          url: 'promise',
+          onClick: () => {
+            navigate('/promise');
+          }
+        }
+      ]
     }
-  }
+  ];
+
+  // function renderMenu() {
+  //   if (menu) {
+  //     return menu.map((item) => (
+  //       <Menu.Item className="submenu" key={item.key}>
+  //         <NavLink to={item.url}>
+  //           <span>{item.title}</span>
+  //         </NavLink>
+  //       </Menu.Item>
+  //     ));
+  //   } else {
+  //     navigate('/');
+  //   }
+  // }
 
   return (
-    <div>
-      <Menu mode="horizontal" items={menu}></Menu>
+    <div className="main">
+      <Menu mode="inline" items={menu} style={{ width: '20%', height: '100vh' }}></Menu>
       <Outlet />
     </div>
   );

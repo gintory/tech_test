@@ -1,6 +1,6 @@
 {
   "RECORDS": [
-    { "userId": 1, "userName": "admin", "password": "123456", "userType": 1 },
+    { "userId": 0, "userName": "admin", "password": "123456", "userType": 1 },
     { "userId": 2, "userName": "Venti", "password": "123456", "userType": 2 },
     { "userId": 3, "userName": "Zhongli", "password": "123456", "userType": 2 },
     { "userId": 5, "userName": "Tartaglia", "password": "123456", "userType": 2 },

@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+}
+
+.promise{
+    width: 80%;
+    padding: 30px;
+}
+
+.content{
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.btn{
+    /* display: block; */
+    margin: 10px 20px;
+    width: 200px;
+}
